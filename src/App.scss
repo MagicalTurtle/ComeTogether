@@ -1,0 +1,116 @@
+
+@font-face {
+  font-family: Quicksand-Light;
+  src: url(./fonts/Quicksand-Light.otf);
+}
+
+.App {
+  height: 100vh;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  display: flex;
+  overflow-y: visible;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button1 {
+  background-color: rgba(0, 0, 0, 0) !important;
+  width: 100%;
+  margin: 3em auto 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  transition: all .25s ease-in-out; 
+}
+
+.button1:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+  transform: scale(1.08); 
+}
+
+
+.NavStyle {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: white;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  justify-content: center;
+}
+
+.NavText {
+  font-size: 2rem;
+  padding: 0px 2rem;
+  font-family: quicksand-light;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  transition: all .25s ease-in-out; 
+  
+}
+
+.NavText:hover {
+  transform: scale(1.08); 
+  padding: 0px 4.3rem;
+}
+
+.outerWrap {
+  background: rgb(59, 59, 59);
+  height: 100vh;
+  min-height: 100%;
+
+}
+
+.MainStyle {
+  margin: 0% 10% 0% 10%;
+  width: 100%;
+  margin-top: 5.5rem;
+  overflow-y: auto;
+  position: relative;
+  .mainContent {
+    color: white;
+
+    .mainInner {
+      padding: 0.5rem 2rem;
+    }
+    h1,
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-columns.custom-columns {
+      column-count: 1;
+  }
+}
+@media (min-width: 1000px) {
+  .card-columns.custom-columns {
+      column-count: 2;
+  }
+}
+@media (min-width: 1000px) {
+  .card-columns.custom-columns {
+      column-count: 3;
+  }
+}
+// @media (min-width: 1200px) {
+//   .card-columns.custom-columns {
+//       column-count: 4;
+//   }
+// }
