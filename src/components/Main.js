@@ -1,35 +1,57 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { Col } from 'react-bootstrap'
-import { Row } from 'react-bootstrap'
+import { Rowm, Col, Image } from 'react-bootstrap'
+import pfpImage from '../assets/PFP_TEST.png';
+import AlbumImage from '../assets/ALBUM_TEST.png';
 
 const Main = () => {
     return (
         
         <div className="MainStyle">
-            <div class="card-columns custom-columns">
-                <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap"/>
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="card">
+                    <div class="card-body" className='UserCard'>
+                    <div className='PFP'>
+                        <img src={ pfpImage } className="round-img"/>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap"/>
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">MagpieMan43</h5>
+                    <div className="AboutUser">
+                    <p style={{margin: "0", display: "inline"}}>Beatle</p>
+                    <p style={{margin: "0", display: "inline", padding: "5px"}}> - </p>
+                    <p style={{margin: "0", display: "inline", align:"right"}}>Psychedelic Rock</p>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap"/>
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+            </div>
+            <div className="StatCards">
+                <div class="card-columns custom-columns">
+                    <div class="card">
+                        <div className="AlbumImageStyle">
+                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
+                        </div>
+                        <div class="card-body">
+                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Songs</h5>
+                        <p class="card-text">1.Come Together</p>
+                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div className="AlbumImageStyle">
+                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
+                        </div>
+                        <div class="card-body">
+                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Artists</h5>
+                        <p class="card-text">1.The Beatles</p>
+                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div className="AlbumImageStyle">
+                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
+                        </div>
+                        <div class="card-body">
+                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Albums</h5>
+                        <p class="card-text">1. Abby Road</p>
+                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -76,8 +76,8 @@
 }
 
 .MainStyle {
-  margin: 0% 10% 0% 10%;
-  width: 100%;
+  margin: 0% 5% 0% 5%;
+  width: 150%;
   margin-top: 5.5rem;
   overflow-y: auto;
   position: relative;
@@ -86,6 +86,7 @@
 
     .mainInner {
       padding: 0.5rem 2rem;
+      margin: 0% 10% 0% 10%;
     }
     h1,
     h2 {
@@ -94,23 +95,49 @@
   }
 }
 
-@media (max-width: 1000px) {
+.UserCard {
+  align-items: center;
+  text-align: center;
+  box-shadow: 10px 10px 5px rgba(54, 54, 54, 0.507);
+}
+
+.PFP {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.AboutUser {
+  padding: 5px;
+}
+
+.StatCards {
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.AlbumImageStyle {
+  padding: 5px;
+}
+
+@media (max-width: 900px) {
   .card-columns.custom-columns {
       column-count: 1;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .card-columns.custom-columns {
       column-count: 2;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .card-columns.custom-columns {
       column-count: 3;
+      padding-top: 20px;
+      max-width: 1300px;
   }
 }
-// @media (min-width: 1200px) {
-//   .card-columns.custom-columns {
-//       column-count: 4;
-//   }
-// }
