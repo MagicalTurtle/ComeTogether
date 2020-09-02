@@ -86,7 +86,6 @@
 
     .mainInner {
       padding: 0.5rem 2rem;
-      margin: 0% 10% 0% 10%;
     }
     h1,
     h2 {
@@ -110,34 +109,27 @@
   border-radius: 50%;
 }
 
+.CardDiv {
+  margin: auto;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  // padding: 20px;
+  width: 83.1%;
+}
+
 .AboutUser {
   padding: 5px;
 }
 
-.StatCards {
-  padding-top: 20px;
-  justify-content: center;
-  align-items: center;
+.CardStats {
+  min-width: 200px;
+  max-width: 500px;
+  margin: 20px;
 }
 
 .AlbumImageStyle {
   padding: 5px;
 }
 
-@media (max-width: 900px) {
-  .card-columns.custom-columns {
-      column-count: 1;
-  }
-}
-@media (min-width: 900px) {
-  .card-columns.custom-columns {
-      column-count: 2;
-  }
-}
-@media (min-width: 900px) {
-  .card-columns.custom-columns {
-      column-count: 3;
-      padding-top: 20px;
-      max-width: 1300px;
-  }
-}
+
