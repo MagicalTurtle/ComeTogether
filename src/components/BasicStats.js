@@ -4,14 +4,14 @@ import { Row, Col, Image, CardDeck, Card } from 'react-bootstrap'
 import pfpImage from '../assets/PFP_TEST.png';
 import AlbumImage from '../assets/ALBUM_TEST.png';
 
-const Main = () => {
+const BasicStats = () => {
     return (
         
-        <div className="MainStyle">
-            <Row className="justify-content-md-center">
+        <div className="BasicStyle">
+            <Row className="justify-content-md-center" style={{overflow : "hidden"}}>
             <Col xs lg="10">
-            <div class="card">
-                    <div class="card-body" className='UserCard'>
+            <div class="card" className='UserCard'>
+                    <div class="card-body">
                     <div className='PFP'>
                         <img src={ pfpImage } className="round-img"/>
                     </div>
@@ -26,13 +26,27 @@ const Main = () => {
             </Col>
             </Row>
             <div className="CardDiv">
-            <CardDeck className="justify-content-md-center">
+            <CardDeck className="justify-content-md-center" style={{overflow : "hidden"}}> 
                 <Card className="CardStats">
                     <Card.Img variant="top" src={ AlbumImage } style={{padding : "5px"}} />
                     <Card.Body>
                     <Card.Title>Top Songs</Card.Title>
                     <Card.Text>
-                        1. Come Together
+                        <p>
+                        1. Come Together - The Beatles
+                        </p>
+                        <p>
+                        2. Come Together - The Beatles
+                        </p>
+                        <p>
+                        3. Come Together - The Beatles
+                        </p>
+                        <p>
+                        4. Come Together - The Beatles
+                        </p>
+                        <p>
+                        5. Come Together - The Beatles
+                        </p>
                     </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -64,44 +78,9 @@ const Main = () => {
                     </Card.Footer>
                 </Card>
                 </CardDeck>
-
-
-{/*                 
-                <div class="card-columns custom-columns" className="justify-content-md-center">
-                    <div class="card" style={{maxWidth : "33%"}}>
-                        <div className="AlbumImageStyle">
-                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
-                        </div>
-                        <div class="card-body">
-                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Songs</h5>
-                        <p class="card-text">1.Come Together</p>
-                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
-                        </div>
-                    </div>
-                    <div class="card" style={{maxWidth : "33%"}}>
-                        <div className="AlbumImageStyle">
-                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
-                        </div>
-                        <div class="card-body">
-                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Artists</h5>
-                        <p class="card-text">1.The Beatles</p>
-                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
-                        </div>
-                    </div>
-                    <div class="card" style={{maxWidth : "33%"}}>
-                        <div className="AlbumImageStyle">
-                            <img class="card-img-top" src={ AlbumImage } alt="Card image cap"/>
-                        </div>
-                        <div class="card-body">
-                        <h5 class="card-title" style={{textAlign: "Center"}}>Top Albums</h5>
-                        <p class="card-text">1. Abby Road</p>
-                        <p class="card-text"><small class="text-muted">Last 6 Weeks</small></p>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     )
 }
 
-export default Main
+export default BasicStats
