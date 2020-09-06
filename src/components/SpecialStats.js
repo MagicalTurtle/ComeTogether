@@ -8,8 +8,8 @@ const SpecialStats = () => {
     return (
         
         <div className="SpecialStyle">
-            <div className="CardDiv">
-            <CardDeck className="justify-content-md-center" style={{overflow : "hidden"}}> 
+            <div className="CardDiv animate__animated animate__slideInLeft">
+            <CardDeck className="justify-content-md-center " style={{overflow : "hidden"}}> 
                 <Card className="CardStats">
                     <Card.Img variant="top" src={ AlbumImage } style={{padding : "5px"}} />
                     <Card.Body>

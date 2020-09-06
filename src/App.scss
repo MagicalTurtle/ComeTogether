@@ -1,9 +1,17 @@
-
 @font-face {
-  font-family: Quicksand-Light;
-  src: url(./fonts/Quicksand-Light.otf);
+  font-family: Lato-Light;
+  src: url(./fonts/Lato-Light.ttf);
 }
 
+@font-face {
+  font-family: Lato-Bold;
+  src: url(./fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: Lato-Black;
+  src: url(./fonts/Lato-Black.ttf);
+}
 
 .App {
   background-color: #c2a4d4;
@@ -48,6 +56,12 @@
 }
 
 
+#NavBar {
+  transition-property: background, border-bottom;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
 .NavStyle {
   height: 80px;
   width: 100%;
@@ -60,15 +74,20 @@
   top: 0;
   z-index: 2;
   justify-content: center;
+  background-color: rgba(95, 95, 95, 0.726);
+  border-bottom: 1px solid black;
 }
 
+
 .NavText {
+  background: 0%;
+  border: none;
+  color: white;
   font-size: 2rem;
   padding: 0px 2rem;
-  font-family: quicksand-light;
+  font-family: Lato-Light;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
   transition: all .25s ease-in-out; 
-  
 }
 
 .NavText:hover {
@@ -158,6 +177,8 @@
 
 .round-img {
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 .CardDiv {
@@ -173,7 +194,10 @@
 
 .AboutUser {
   padding: 5px;
+  font-family: Lato-Light;
+  font-size: 1.3rem;
 }
+
 
 .CardStats {
   min-width: 200px;
@@ -186,5 +210,4 @@
 .AlbumImageStyle {
   padding: 5px;
 }
-
 

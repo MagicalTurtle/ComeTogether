@@ -8,15 +8,16 @@ const BasicStats = () => {
     return (
         
         <div className="BasicStyle">
-            <Row className="justify-content-md-center" style={{overflow : "hidden"}}>
-            <Col xs lg="10">
-            <div class="card" className='UserCard'>
+            <Row className="justify-content-md-center animate__animated animate__slideInLeft" style={{overflow : "hidden"}}>
+            <Col xs lg="20" >
+            <div class="card shadow-lg" className='UserCard'>
                     <div class="card-body">
                     <div className='PFP'>
                         <img src={ pfpImage } className="round-img"/>
                     </div>
-                    <h5 class="card-title">MagpieMan43</h5>
                     <div className="AboutUser">
+                    <h5 class="card-title" style={{fontFamily : "Lato-Bold", fontSize : "1.4rem", display: "inline"}}>MagpieMan43</h5>
+                    <p style={{margin: "0", display: "inline", padding: "5px"}}> - </p>
                     <p style={{margin: "0", display: "inline"}}>Beatle</p>
                     <p style={{margin: "0", display: "inline", padding: "5px"}}> - </p>
                     <p style={{margin: "0", display: "inline", align:"right"}}>Psychedelic Rock</p>
@@ -25,8 +26,8 @@ const BasicStats = () => {
             </div>
             </Col>
             </Row>
-            <div className="CardDiv">
-            <CardDeck className="justify-content-md-center" style={{overflow : "hidden"}}> 
+            <div className="CardDiv animate__animated animate__slideInRight">
+            <CardDeck className="justify-content-md-center " style={{overflow : "hidden"}}> 
                 <Card className="CardStats">
                     <Card.Img variant="top" src={ AlbumImage } style={{padding : "5px"}} />
                     <Card.Body>
