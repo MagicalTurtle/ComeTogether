@@ -18,7 +18,7 @@ export const Login = () => {
     function loginClicked() {
         let clientID = 'c0165aba62184390b6b994b03fb8f467'
         let redirectURI = "http://localhost:3000/callback"
-        let state = generateId(8) // to prevent cross site attacks
+        let state = generateId(8) // to prevent cross site scripting (?)
         window.sessionStorage.setItem('loginState', state)
         let scope = 'user-follow-read user-top-read'
 

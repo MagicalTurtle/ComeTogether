@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom';
 import './App.scss';
 
 var Spotify = require('./spotify-web-api.js');
@@ -34,25 +35,23 @@ export const Callback = () => {
     if (getUrlParameter('access_token')) {
         sp.setAccessToken(getUrlParameter('access_token'))
         sp.getMe()
-            .then(function(user) { // YO AIDAN LOOK U CAN GET DATA ITS POG AF
-                console.log(user)
-                document.getElementById('loggedInAs').innerHTML = user.display_name;
+            .then(function(user) {
+                window.sessionStorage.setItem('accessToken', getUrlParameter('access_token'))
+                window.location.href = 'http://localhost:3000/';
         },
         function (err) {
             console.error(err);
+            window.location.href = 'http://localhost:3000/error?' + err;
         });
-        return (
-            <div className="App">
-                <div className="container">
-                    <h2 id='loggedInAs'>da user will b here</h2>
-                </div>
-            </div>
-        )
+
+        return (<div className="App"></div>) // umm this isnt clean but this is just our color bg placeholder
     }
     
     // if spotify returns us an error
     else if (getUrlParameter('error')) { // idk why this would happen ill figure it out later, TODO: tbh all these error things should be managed by a function
-        return alert(getUrlParameter('error'))
+        alert(getUrlParameter('error'))
+        window.location.href = 'localhost:3000/error';
+        return
     } else { // woah bro you shouldnt be here if not redirected from spotify oauth
         return (
             <div className="App">
