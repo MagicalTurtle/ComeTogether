@@ -1,5 +1,4 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom';
 import './App.scss';
 
 var Spotify = require('./spotify-web-api.js');
@@ -35,7 +34,7 @@ export const Callback = () => {
     if (getUrlParameter('access_token')) {
         sp.setAccessToken(getUrlParameter('access_token'))
         sp.getMe()
-            .then(function(user) {
+            .then(function() {
                 window.sessionStorage.setItem('accessToken', getUrlParameter('access_token'))
                 window.location.href = 'http://localhost:3000/';
         },
@@ -49,8 +48,7 @@ export const Callback = () => {
     
     // if spotify returns us an error
     else if (getUrlParameter('error')) { // idk why this would happen ill figure it out later, TODO: tbh all these error things should be managed by a function
-        alert(getUrlParameter('error'))
-        window.location.href = 'localhost:3000/error';
+        window.location.href = 'localhost:3000/error?' + getUrlParameter('error');
         return
     } else { // woah bro you shouldnt be here if not redirected from spotify oauth
         return (

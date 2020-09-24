@@ -22,27 +22,6 @@ export const Home = () => {
         
         const scrollAmount = -280;
         const { top } = heroElm.getBoundingClientRect();
-        
-        // if (top - window.innerHeight < scrollAmount -330) {
-        //     NavBarElm.style.backgroundColor = '#739e7a';
-        //     NavBarElm.style.borderBottom = '1px solid black'
-
-        // } else {
-        //     if (top - window.innerHeight < scrollAmount) {
-        //         NavBarElm.style.backgroundColor = '#749aa5';
-        //         NavBarElm.style.borderBottom = '1px solid black'
-
-        //     } else {
-        //         if (top - window.innerHeight < scrollAmount+490) {
-        //             NavBarElm.style.backgroundColor = '#956aa1';
-        //             NavBarElm.style.borderBottom = '1px solid black'
-
-        //         } else {
-        //             NavBarElm.style.backgroundColor = '#c2a4d4';
-        //             NavBarElm.style.borderBottom = '0px'
-        //         }
-        //     }
-        // }
 
         // Background Color
         if (top - window.innerHeight < scrollAmount -330) {

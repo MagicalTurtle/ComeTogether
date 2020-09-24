@@ -13,12 +13,12 @@ const BasicStats = () => {
             <div class="card shadow-lg" className='UserCard'>
                     <div class="card-body">
                     <div className='PFP'>
-                        <img src={ pfpImage } className="round-img"/>
+                        <img src={ pfpImage } alt='' className="round-img"/>
                     </div>
                     <div className="AboutUser">
                     <h5 class="card-title" style={{fontFamily : "Lato-Bold", fontSize : "1.4rem", display: "inline"}}>MagpieMan43</h5>
                     <p style={{margin: "0", display: "inline", padding: "5px"}}> - </p>
-                    <p style={{margin: "0", display: "inline"}}>Beatle</p>
+                    <p style={{margin: "0", display: "inline"}}>Da Beatles</p>
                     <p style={{margin: "0", display: "inline", padding: "5px"}}> - </p>
                     <p style={{margin: "0", display: "inline", align:"right"}}>Psychedelic Rock</p>
                     </div>

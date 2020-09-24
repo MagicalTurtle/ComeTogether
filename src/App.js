@@ -15,8 +15,9 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route path="/login" component={Login} />
-             <Route path="/callback" component={Callback} />
+            <Route path="/callback" component={Callback} />
             <Route path="/compare" component={Compare} />
             <Route component={Error404} />
           </Switch>

@@ -1,19 +1,19 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import { loginClicked } from '../Login.js'
 
-const Nav = () => {
-
-    const changePage = async (page) => {
+export default class Nav extends Component {
+    changePage = async (page) => {
         document.location.href = `/${page}`;
     }
-    
 
-    return (
-        <div id="NavBar" className="NavStyle animate__animated animate__slideInDown">
-            <span id="NavMain" className="NavText">Main</span>
-            <span id="NavComp" onClick={() => changePage ("Compare")} className="NavText">Compare</span>
-        </div>
-    )
+    render() {
+        return (
+            <div id="NavBar" className="NavStyle animate__animated animate__slideInDown">
+                <button id="NavMain" onClick={() => this.changePage("home")} className="NavText">Main</button>
+                <button id="NavComp" onClick={() => this.changePage("compare")} className="NavText">Compare</button>
+                <button className="loginButton" id="loginButton" onClick={loginClicked}>Login with Spotify</button>
+            </div>
+        )
+    }
+
 }
-
-export default Nav  
